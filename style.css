@@ -1,0 +1,256 @@
+body, *{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}       
+body.dimmed{
+    opacity: 0.1;
+    transition: opacity 0.3s;
+}
+.main {
+    background-color: blueviolet;
+    height: calc(100vh - 1rem); /* Adjust height to account for margin */
+    margin: 0.5rem; /* Set margin to 1rem around the container */
+    box-shadow: 0px 0px 5px rgb(8, 8, 8);
+    overflow-y: auto;
+}
+
+
+.table{
+    margin: 0 auto;
+    margin: calc(100vh -98vh);
+}
+.table {
+    width: 100%;
+    height: calc(100vh - 1rem);
+    display: table;
+    font-size: 1.5rem;
+    display: table; 
+    margin: calc(100vh - 98vh) auto; 
+    overflow-y: auto;
+    /* display: block; */
+}
+thead th{
+    z-index: 2;
+    top:0;
+    color: white;
+    margin: 0.1rem 0;
+    background-color: rgb(30, 36, 119);
+    position: sticky;
+}
+
+tbody th{
+    padding: 2rem 0;
+    color: white;
+    background-color: rgba(17, 17, 155, 0.658);
+}
+/* thead th {
+    position: sticky; /* Sticky positioning keeps the header in place 
+    top: 0; /* Sticks the header to the top when scrolling 
+    padding: 0.5rem; Add padding for better spacing
+    text-align: left; Align text to the left
+} */
+
+#add-data{
+    cursor: pointer;
+    font-size:2.5rem;
+    border: 0;
+    position: absolute;
+    z-index: 1090;
+    right: 3rem;
+    bottom: 2rem;
+    border-radius: 50%;
+    width: 4rem;
+    transition: .1s ease;
+    height: 4rem;
+    box-shadow: 0 0 3px black;
+}
+#add-data:hover,#add-box-add:hover, #add-box-cancel:hover{
+    /* font-size: 2.83rem; */
+    /* width: 4.2rem; */
+    /* height: 4.2rem; */
+    box-shadow: 0 0 5px black;
+}
+.timeAndDay{
+    width: 100%;
+    height: 100% ;
+    background-color: rgba(0, 64, 116, 0.596);
+    p{
+        display: inline-block; 
+        max-width: 150px; 
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        vertical-align: middle;
+        font-size: 1.2rem;
+    }
+
+}
+.timeAndDay:hover{
+    background-color: rgba(0, 64, 116, 0.5);
+    
+}
+#notes{
+    background-color: rgba(37, 80, 136, 0.644);
+}
+
+th {
+    width: calc(100% / 8); /* Divide total width by number of headers */
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+.days{
+    /* flex: 1;
+    width: 2511rem; */
+}
+.time{
+    /* width: 1006rem; */
+}
+
+
+.active-day{
+    background-color: rgb(163, 165, 75);
+}     
+.timeAndDay p{
+    padding: 0 0.2rem;
+    border-radius: 0.2rem;
+    /* display: flex; */
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(56, 68, 170);
+    cursor: pointer;
+}
+.timeAndDay p:hover{
+    background-color: black;
+}
+
+
+.add-button .tooltip-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    z-index: 1090;
+    right: 4rem;
+    bottom: 6.3rem;
+    background-color: rgb(73, 75, 0);
+    font-size: 1.2rem;
+    text-shadow: 0 0 1px black;
+    font-weight: 600;
+    padding: 0.15rem 0.3rem;
+    border-radius: 0.1rem;
+    color: white;
+    visibility: hidden;
+}
+
+    
+
+.add-button:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.add-new-data-box{
+    opacity: 1;
+    transition: opacity 0.3s;
+    padding: 0;
+    width: 25rem;
+    height: 20rem;
+    position: absolute;
+    z-index: 1090;
+    top: 50%;
+    /* right: -30rem; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    h2{
+        position: absolute;
+        top: 1rem;
+        /* align-self: flex-start; */
+        background-color: rgb(212, 195, 36);
+        padding: 0.1rem 0.3rem;
+        margin: 0.1rem 0.5rem 12rem;
+    }
+}
+
+
+.add-box-days{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    display: flex;
+   label{
+        background-color: rgb(133, 108, 0);
+        padding: 0.2rem;
+        margin: 0.2rem;
+        color: white;
+    }
+}
+
+.add-box-days-buttons input{
+    font-size: 3rem;
+    background-color: rgb(133, 108, 0);
+    padding: 0.2rem;
+    margin: 0.2rem 0.9rem;
+    color: white;
+
+}
+#mon{
+    margin-left: 3.9rem;
+}
+
+.add-box-add{
+    background-color: rgb(40, 81, 119);
+    color: white;
+    padding: 0.1rem 0.3rem;
+    font-weight: 600;
+    /* margin: 2.5rem; */
+    font-size: 1.2rem;
+}
+
+.add-box-cancel{
+    padding: 0.1rem 0.3rem;
+    background-color: rgb(146, 0, 0);
+    color: white;
+    /* margin: 2.5rem; */
+    font-size: 1.2rem;
+}
+.buttons{
+    margin-top: 2rem;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    height: 2rem;
+}
+
+#add-box-text-btn {
+    resize: both;
+    height: 4rem;
+    width: 13rem;
+    overflow: scroll;
+    background-color: #ebebeb;
+    border: 1px solid black;
+    padding: 0.2rem;
+    font-size: 1rem;
+}
+
+#add-box-text-btn:focus{
+    font-weight: 550;
+    box-shadow: 0 0 3px black;
+
+}
+
+.add-box-text,.add-box-time{
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 900;
+    align-self: flex-start;
+    margin-left: 3.3rem;
+}
+
+

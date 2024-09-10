@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <section class="main">
+       <table class="table">
+            <thead class="thead" >
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuseday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr id="n810">
+                    <th>08-10</th>
+                    <td><div class="timeAndDay">
+                    </div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                </tr>
+                
+                <tr id="n1012">
+                    <th>10-12</th>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                </tr>
+                <tr id="n1214">
+                    <th>12-14</th>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                </tr>
+                <tr id="n1416">
+                    <th>14-16</th>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                </tr>
+                <tr id="n1618">
+                    <th>16-18</th>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                </tr>
+                <tr id="n1820">
+                    <th>18-20</th>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                </tr>
+                <tr id="n2022">
+                    <th>20-22</th>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                    <td><div class="timeAndDay"></div></td>
+                </tr>
+                <tr id="notesRow">
+                    <th>Notes</th>
+                    <td colspan="7" id="notes"></td>
+                </tr>
+            </tbody>
+
+       </table>
+       <div class="add-button">
+           <button id="add-data"><i class='bx bx-add-to-queue'></i></button>
+           <div class="tooltip-text">Add new data!</div>
+       </div>
+       <div class="add-new-data-box" id="new-data-box">
+            <h2>Add new data!</h2>
+            <div class="add-box-days">
+                <p>Day/s:</p>
+                <label for="mon">Mon.</label>
+                <label for="tus">Tus.</label>
+                <label for="wed">Wed.</label>
+                <label for="thu">Thu.</label>
+                <label for="fri">Fri.</label>
+                <label for="sat">Sat.</label>
+                <label for="sun">Sun.</label>
+            </div>
+            <div class="add-box-days-buttons">
+                <input type="checkbox" name="mon" id="mon" checked>
+                <input type="checkbox" name="tus" id="tus">
+                <input type="checkbox" name="mon" id="wed">
+                <input type="checkbox" name="mon" id="thu">
+                <input type="checkbox" name="mon" id="fri">
+                <input type="checkbox" name="mon" id="sat">
+                <input type="checkbox" name="mon" id="sun">
+            </div>
+            <div class="add-box-time">
+                <div>
+                    From: <input type="time" value="08:00" id="add-box-start-time">
+                    To:<input type="time" value="10:00" id="add-box-end-time">
+
+                </div>
+            </div>
+            <div class="add-box-text">
+                Enter a text: 
+                <input type="textarea" placeholder="Write text here!" id="add-box-text-btn">
+            </div>
+
+            <div class="buttons">
+                <button class="add-box-add" id="add-box-add">Add</button>
+                <button class="add-box-cancel" id="add-box-cancel">Cancel</button>
+            </div>
+       </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
